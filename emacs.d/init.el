@@ -67,3 +67,6 @@
   "M-L" (my-org-in-calendar calendar-forward-month)
   "M-K" (my-org-in-calendar calendar-backward-year)
   "M-J" (my-org-in-calendar calendar-forward-year))
+
+(setq org-agenda-files
+  '("~/org/personal.org"))
