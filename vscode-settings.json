@@ -1,0 +1,37 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Quiet Light",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "keyboard.dispatch": "keyCode",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "u"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "undo",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-r>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "redo",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.lineNumbers": "relative",
+}

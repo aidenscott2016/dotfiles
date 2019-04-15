@@ -51,4 +51,4 @@ cmap w!! w !sudo tee > /dev/null %
 set backupcopy=yes
 set hidden 
 set term=screen-256color
-
+set background=dark
