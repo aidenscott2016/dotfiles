@@ -34,4 +34,8 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.lineNumbers": "relative",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }

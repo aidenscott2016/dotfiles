@@ -1,4 +1,8 @@
 ;c load package manager, add the Melpa package registry
+
+(add-hook 'scheme-mode-hook 'geiser-mode)
+(setq geiser-default-implementation 'guile)
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
@@ -33,7 +37,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (general syndicate use-package list-packages-ext let-alist evil-leader))))
+    (geiser general syndicate use-package list-packages-ext let-alist evil-leader))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -45,8 +49,9 @@
 (use-package syndicate
   :ensure t)
 (use-package general
-  :ensure t
-)
+  :ensure t)
+(use-package geiser
+  :ensure t)
 
 
 ;org-mode-evil-calendar
@@ -70,3 +75,16 @@
 
 (setq org-agenda-files
   '("~/org/personal.org"))
+
+(setq org-src-fontify-natively t
+    org-src-tab-acts-natively t
+    org-confirm-babel-evaluate nil
+    org-edit-src-content-indentation 0)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (scheme . t)))
+
+(add-hook 'scheme-mode-hook 'geiser-mode)
+(setq geiser-repl-use-other-window 'nil)
